@@ -38,7 +38,7 @@ restartButton.addEventListener('click', () => {
 
 gameContainer.addEventListener('click', (e) => {
 
-    if (e.target.classList.contains("mole-clicked"){
+    if (e.target.classList.contains("mole-clicked")) {
         whackSound.currentTime = 0;
         whackSound.play();
         score++;
@@ -49,14 +49,5 @@ gameContainer.addEventListener('click', (e) => {
         textElement.setAttribute("class", "whack-text");
         textElement.innerHTML = "Whack!";
         bushElement.appendChild(textElement);
-
-
-
-
-
     }
-
-
-
-
 });
