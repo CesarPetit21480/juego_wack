@@ -12,7 +12,7 @@ backgoundMusic.volume = 0.3;
 
 // variable para gestionar el juego
 
-let startGame = startTime;
+let startGame = 0;//startTime;
 let countDown = 0;
 let score = 0;
 
@@ -22,6 +22,7 @@ const starButton = document.getElementById('start-game');
 const restartButton = document.getElementById('restart-game');
 
 starButton.addEventListener('click', () => {
+    alert('hola');
     startGameLogic();
     starButton.style.display = 'none';
     restartButton.style.display = 'none';
@@ -49,5 +50,8 @@ gameContainer.addEventListener('click', (e) => {
         textElement.setAttribute("class", "whack-text");
         textElement.innerHTML = "Whack!";
         bushElement.appendChild(textElement);
+        setTimeout(() => {
+            bushElement.removeChild(textElement);
+        }, 1000);
     }
 });
