@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -9,21 +10,24 @@ h1 {
   text-align: center;
   margin-top: 20px;
   color: #fff;
-  font-size: 2rem;
+  font-size: 2rem; /* Texto adaptable */
 }
+
 img {
   width: 100%;
   display: block;
 }
+
 body {
   font-family: "Paytone One", sans-serif;
   background-color: #769c38;
 }
+
 .count {
   text-align: center;
   margin-top: 20px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Texto adaptable */
 }
 
 .btn-container {
@@ -31,19 +35,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 5px; /* Espacio entre botones */
 }
 
 #start-game,
 #restart-game {
   padding: 8px 15px;
-  border-radius: 15px;
+  border-radius: 20px;
   border: none;
   font-family: "Paytone One", sans-serif;
   background-color: #066924;
+  color: white;
+  cursor: pointer;
   font-size: 1rem;
   transition: all 0.5s ease;
-  cursor: pointer;
 }
 
 #start-game:hover,
@@ -55,18 +60,21 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 20px; /* Espacio entre los elementos */
 }
+
 .item {
-  width: 100%;
-  aspect-ratio: 5/6;
+  width: 100%; /* Ajusta el ancho para que se adapte al contenedor */
+  aspect-ratio: 5 / 6; /* Mantiene la proporción */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 .mole {
   position: absolute;
   left: 50%;
@@ -81,15 +89,16 @@ body {
   padding: 7px;
 }
 
-/* .mole-hide {
+.mole-hide {
   bottom: 10px;
   width: 50px;
-} */
+}
 
 .mole-appear {
   width: 120px;
   bottom: 40px;
 }
+
 .bush {
   width: 120px;
   position: absolute;
@@ -109,6 +118,7 @@ body {
   transform: translateX(-50%);
 }
 
+/* Media queries para dispositivos más pequeños */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8rem; /* Reduce el tamaño del título */
@@ -166,6 +176,7 @@ body {
   }
 
   .container {
+   
     gap: 10px;
   }
 
